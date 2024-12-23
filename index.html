@@ -1,183 +1,298 @@
 <!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="js/datepicker.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/main2.min.css" media="screen, projection, print">
-    <title>Квадрат Пифагора</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/main2.min.css"
+      media="screen, projection, print"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Квадрат Піфагора</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="matrix">
-        <h2 class="matrix__title">Квадрат Пифагора</h2>
-
-        <div class="wrapper matrix__wrapper">
-            <div class="matrix__form">
-                <input class="matrix__input matrix_date" placeholder="Введите дату рождения" />
-                <div class="matrix__button_wrap"><button class="matrix__button">Рассчитать</button></div>
+      <div class="wrapper matrix__wrapper">
+        <div class="matrix__form">
+          <div class="calc-container-column calc-container-column_header">
+            <div class="calc-inps-header mb-5">
+              <div class="calc-inps-header-row">
+                <span><i class="fas fa-user"></i> Iмʼя:</span>
+                <input
+                  type="text"
+                  name="calc-matriza-name"
+                  placeholder="Ваше ім'я"
+                  id="calc-matriza-name"
+                  class="calc-inp-matriza"
+                />
+              </div>
+              <div class="calc-inps-header-row">
+                <span
+                  ><i class="fas fa-calendar-alt"></i> Дата народження:</span
+                >
+                <input
+                  data-mask="00.00.0000"
+                  type="tel"
+                  name="calc-matriza-bd"
+                  id="calc-matriza-bd"
+                  placeholder="напр: 01.01.1990"
+                  class="calc-inp-matriza matrix__input matrix_date"
+                />
+              </div>
             </div>
-            <div class="result">
-                <div class="result__loader">
-                    <div class="result__image"> </div>
-                </div>
-                <div class="result__hidden">
-                    <p class="matrix__text"> </p>
-                    <div class="result__wrap">
-                        <div class="result__left">
-                            <div class="result__big">
-                                <div class="result__row result__flex">
-                                    <div class="result__info">Дата рождения</div>
-                                    <div class="result__answer" data-answer="date"> </div>
-                                </div>
-                                <div class="result__row result__flex">
-                                    <div class="result__info">Доп. числа</div>
-                                    <div class="result__answer" data-answer="second-number"> </div>
-                                </div>
-                                <div class="result__row result__flex">
-                                    <div class="result__info">Число судьбы</div>
-                                    <div class="result__answer" data-answer="destiny-number"> </div>
-                                </div>
-                            </div>
-                            <div class="result__cube">
-                                <div class="result__row">
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Характер</h4>
-                                            <p data-index="0" class="kv_1"> </p>
-                                        </div>
-                                    </div>
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Здоровье</h4>
-                                            <p data-index="3" class="kv_2"> </p>
-                                        </div>
-                                    </div>
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Удача</h4>
-                                            <p data-index="6" class="kv_3"> </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="result__row">
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Энергия</h4>
-                                            <p data-index="1" class="kv_4"> </p>
-                                        </div>
-                                    </div>
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Логика</h4>
-                                            <p data-index="4" class="kv_5"> </p>
-                                        </div>
-                                    </div>
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Долг</h4>
-                                            <p data-index="7" class="kv_6"> </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="result__row">
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Интерес</h4>
-                                            <p data-index="2" class="kv_7"> </p>
-                                        </div>
-                                    </div>
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Труд</h4>
-                                            <p data-index="5" class="kv_8"> </p>
-                                        </div>
-                                    </div>
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Память</h4>
-                                            <p data-index="8" class="kv_9"> </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="result__row">
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Самооценка</h4>
-                                            <p class="d_p3"> </p>
-                                        </div>
-                                    </div>
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Быт</h4>
-                                            <p data-index="10" class="d_p4"> </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="result__item">
-                                        <div class="result__context">
-                                            <h4>Талант </h4>
-                                            <p class="d_p2"> </p>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="result__right">
-                            <div class="result__item result__item_full">
-                                <div class="result__context">
-                                    <h4 class="top">Темперамент</h4>
-                                    <p data-index="9" class="kv_10"> </p>
-                                </div>
-                            </div>
-                            <div class="result__item result__item_full">
-                                <div class="result__context">
-                                    <h4 class="top">Цель</h4>
-                                    <p data-index="12" class="kv_11"> </p>
-                                </div>
-                            </div>
-                            <div class="result__item result__item_full">
-                                <div class="result__context">
-                                    <h4 class="top">Семья</h4>
-                                    <p data-index="11" class="kv_12"> </p>
-                                </div>
-                            </div>
-                            <div class="result__item result__item_full">
-                                <div class="result__context">
-                                    <h4 class="top">Привычки</h4>
-                                    <p data-index="13" class="kv_13"> </p>
-                                </div>
-                            </div>
-                            <div class="result__item result__item_full" style="background: #A39A92;">
-                                <div class="result__context">
-                                    <h4 class="result__info">Духовность </h4>
-                                    <p class="d_p1"> </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="result">
+          <div class="result__hidden">
+            <div class="result__wrap">
+              <div class="flex flex-col gap-4"  id="contentToSave">
+                <b id="userNameInPdf" style="color: black; font-size: 24px; width: 100%; text-align: center;"></b>
+                <div class="flex flexeble gap-4">
+                  <div class="result__left mb-5">
+                    <div class="result__big">
+                      <div class="result__row result__flex">
+                        <div class="result__info">
+                          <i class="fas fa-calendar-alt"></i> Дата народження
+                        </div>
+                        <div class="result__answer" data-answer="date"></div>
+                      </div>
+                      <div class="result__row result__flex">
+                        <div class="result__info">
+                          <i class="fas fa-plus-circle"></i> Дод. числа
+                        </div>
+                        <div
+                          class="result__answer"
+                          data-answer="second-number"
+                        ></div>
+                      </div>
+                      <div class="result__row result__flex">
+                        <div class="result__info">
+                          <i class="fas fa-star"></i> Число долі
+                        </div>
+                        <div
+                          class="result__answer"
+                          data-answer="destiny-number"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="result__cube">
+                      <div class="result__row">
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-user"></i> Характер</h4>
+                            <p data-index="0" class="kv_1"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-heartbeat"></i> Здоров'я</h4>
+                            <p data-index="3" class="kv_2"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-clover"></i> Удача</h4>
+                            <p data-index="6" class="kv_3"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="result__row">
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-bolt"></i> Енергія</h4>
+                            <p data-index="1" class="kv_4"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-brain"></i> Логіка</h4>
+                            <p data-index="4" class="kv_5"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4>
+                              <i class="fas fa-clipboard-list"></i> Обов'язок
+                            </h4>
+                            <p data-index="7" class="kv_6"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="result__row">
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-search"></i> Інтерес</h4>
+                            <p data-index="2" class="kv_7"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-hammer"></i> Праця</h4>
+                            <p data-index="5" class="kv_8"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-brain"></i> Пам'ять</h4>
+                            <p data-index="8" class="kv_9"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="result__row">
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-thumbs-up"></i> Оцінка</h4>
+                            <p class="d_p3"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-home"></i> Побут</h4>
+                            <p data-index="10" class="d_p4"></p>
+                          </div>
+                        </div>
+                        <div class="result__item">
+                          <div class="result__context">
+                            <h4><i class="fas fa-gem"></i> Талант</h4>
+                            <p class="d_p2"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__right mb-5">
+                    <div class="result__item result__item_full">
+                      <div class="result__context">
+                        <h4 class="top">
+                          <i class="fas fa-user-astronaut"></i> Темперамент
+                        </h4>
+                        <p data-index="9" class="kv_10"></p>
+                      </div>
+                    </div>
+                    <div class="result__item result__item_full">
+                      <div class="result__context">
+                        <h4 class="top">
+                          <i class="fas fa-bullseye"></i> Ціль
+                        </h4>
+                        <p data-index="12" class="kv_11"></p>
+                      </div>
+                    </div>
+                    <div class="result__item result__item_full">
+                      <div class="result__context">
+                        <h4 class="top"><i class="fas fa-users"></i> Сім'я</h4>
+                        <p data-index="11" class="kv_12"></p>
+                      </div>
+                    </div>
+                    <div class="result__item result__item_full">
+                      <div class="result__context">
+                        <h4 class="top">
+                          <i class="fas fa-sync-alt"></i> Звички
+                        </h4>
+                        <p data-index="13" class="kv_13"></p>
+                      </div>
+                    </div>
+                    <div class="result__item result__item_full">
+                      <div class="result__context">
+                        <h4 class="result__info">
+                          <i class="fas fa-peace"></i> Духовність
+                        </h4>
+                        <p class="d_p1"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col">
+                <div class="w-full flex gap-4 flex-col">
+                  <div class="primary-button">
+                    <a href="#cta" class="scrollbtn"
+                      ><span>ЗАМОВИТИ РОЗБІР КВАДРАТА</span></a
+                    >
+                  </div>
+
+                  <div class="primary-button">
+                    <a id="savePdfBtn"><span>Зберегти в PDF</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
+    <br />
     <br />
 
-
-    <br>
-    <br>
-
+    <br />
+    <br />
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <!-- Підключаємо jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+    <!-- Підключаємо jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Підключаємо html2pdf для легшого конвертування HTML в PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
     <script src="js/main.min.js"></script>
 
-</body>
+    <script>
+      document
+        .querySelector(".scrollbtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+
+          window.parent.postMessage("scrollToAnchor", "*");
+        });
+
+      window.addEventListener("load", function () {
+        const iframeHeight = document.body.scrollHeight;
+        window.parent.postMessage(
+          { type: "iframeHeight", height: iframeHeight },
+          "*"
+        );
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Кнопка для збереження в PDF
+        $("#savePdfBtn").click(function () {
+          // Отримуємо ім'я користувача з поля введення
+          const userName = $("#calc-matriza-name").val();
+
+          // Додаємо ім'я до відповідного елемента в HTML
+          const nameElement = document.getElementById("userNameInPdf");
+          if (userName !== "") {
+            nameElement.textContent = `Квадрат піфагора для: ${userName}`;
+          }
+
+          var element = document.getElementById("contentToSave");
+
+          html2pdf()
+            .from(element)
+            .set({
+              filename: `${userName}_особистий_Квадрат_Піфагора_від_Вікторії_Гонч.pdf`, // Назва файлу з ім'ям користувача
+              orientation: "landscape", // Альбомний формат
+              margin: [10, 10, 10, 10], // Падінги
+            })
+            .save();
+        });
+      });
+    </script>
+  </body>
+</html>
