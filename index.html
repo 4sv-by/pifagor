@@ -25,7 +25,7 @@
           <div class="calc-container-column calc-container-column_header">
             <div class="calc-inps-header mb-5">
               <div class="calc-inps-header-row">
-                <span><i class="fas fa-user"></i> Iмʼя:</span>
+                <span> Iмʼя:</span>
                 <input
                   type="text"
                   name="calc-matriza-name"
@@ -35,9 +35,7 @@
                 />
               </div>
               <div class="calc-inps-header-row">
-                <span
-                  ><i class="fas fa-calendar-alt"></i> Дата народження:</span
-                >
+                <span>Дата народження:</span>
                 <input
                   data-mask="00.00.0000"
                   type="tel"
@@ -53,10 +51,18 @@
         <div class="result">
           <div class="result__hidden">
             <div class="result__wrap">
-              <div class="flex flex-col gap-4"  id="contentToSave">
-                <b id="userNameInPdf" style="color: black; font-size: 24px; width: 100%; text-align: center;"></b>
+              <div class="flex flex-col gap-4" id="contentToSave">
+                <b
+                  id="userNameInPdf"
+                  style="
+                    color: black;
+                    font-size: 24px;
+                    width: 100%;
+                    text-align: center;
+                  "
+                ></b>
                 <div class="flex flexeble gap-4">
-                  <div class="result__left mb-5">
+                  <div class="result__left">
                     <div class="result__big">
                       <div class="result__row result__flex">
                         <div class="result__info">
@@ -87,19 +93,19 @@
                       <div class="result__row">
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-user"></i> Характер</h4>
+                            <h4>Характер</h4>
                             <p data-index="0" class="kv_1"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-heartbeat"></i> Здоров'я</h4>
+                            <h4>Здоров'я</h4>
                             <p data-index="3" class="kv_2"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-clover"></i> Удача</h4>
+                            <h4>Удача</h4>
                             <p data-index="6" class="kv_3"></p>
                           </div>
                         </div>
@@ -108,21 +114,19 @@
                       <div class="result__row">
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-bolt"></i> Енергія</h4>
+                            <h4>Енергія</h4>
                             <p data-index="1" class="kv_4"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-brain"></i> Логіка</h4>
+                            <h4>Логіка</h4>
                             <p data-index="4" class="kv_5"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4>
-                              <i class="fas fa-clipboard-list"></i> Обов'язок
-                            </h4>
+                            <h4>Обов'язок</h4>
                             <p data-index="7" class="kv_6"></p>
                           </div>
                         </div>
@@ -131,19 +135,19 @@
                       <div class="result__row">
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-search"></i> Інтерес</h4>
+                            <h4>Інтерес</h4>
                             <p data-index="2" class="kv_7"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-hammer"></i> Праця</h4>
+                            <h4>Праця</h4>
                             <p data-index="5" class="kv_8"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-brain"></i> Пам'ять</h4>
+                            <h4>Пам'ять</h4>
                             <p data-index="8" class="kv_9"></p>
                           </div>
                         </div>
@@ -152,26 +156,26 @@
                       <div class="result__row">
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-thumbs-up"></i> Оцінка</h4>
+                            <h4>Самооцінка</h4>
                             <p class="d_p3"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-home"></i> Побут</h4>
+                            <h4>Побут</h4>
                             <p data-index="10" class="d_p4"></p>
                           </div>
                         </div>
                         <div class="result__item">
                           <div class="result__context">
-                            <h4><i class="fas fa-gem"></i> Талант</h4>
+                            <h4>Талант</h4>
                             <p class="d_p2"></p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="result__right mb-5">
+                  <div class="result__right">
                     <div class="result__item result__item_full">
                       <div class="result__context">
                         <h4 class="top">
@@ -213,7 +217,23 @@
                   </div>
                 </div>
               </div>
-              <div class="flex flex-col">
+              <div class="flex col-reverse  justify-between">
+                <section id="pifagor-square" class="container">
+                  <h3 class="text-center">Квадрат Піфагора</h3>
+
+                  <div class="content">
+                    <p>
+                      Квадрат Піфагора — це числова матриця, що базується на
+                      нумерології, де кожне число має свою енергетичну та
+                      символічну значимість. Він створений на основі дати
+                      народження людини і розкладає числа у певній
+                      послідовності, що дозволяє визначити особистісні
+                      характеристики, сильні та слабкі сторони, а також
+                      потенціал розвитку.
+                    </p>
+                  </div>
+                </section>
+
                 <div class="w-full flex gap-4 flex-col">
                   <div class="primary-button">
                     <a href="#cta" class="scrollbtn"
@@ -222,7 +242,9 @@
                   </div>
 
                   <div class="primary-button">
-                    <a id="savePdfBtn"><span>Зберегти в PDF</span></a>
+                    <a id="savePdfBtn" class="disabled">
+                      <span>Зберегти в PDF</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -270,25 +292,49 @@
 
     <script>
       $(document).ready(function () {
+        // Перевірка полів
+        function validateFields() {
+          const name = $("#calc-matriza-name").val().trim();
+          const birthDate = $("#calc-matriza-bd").val().trim();
+          const isMatrixFilled =
+            $(".kv_1").text().trim() !== "" &&
+            $(".kv_2").text().trim() !== "" &&
+            $(".kv_3").text().trim() !== "";
+
+          if (birthDate && isMatrixFilled) {
+            $("#savePdfBtn").removeClass("disabled").css({
+              "pointer-events": "auto",
+              opacity: 1,
+            });
+          } else {
+            $("#savePdfBtn").addClass("disabled").css({
+              "pointer-events": "none",
+              opacity: 0.5,
+            });
+          }
+        }
+
+        // Відстеження змін у полях
+        $("#calc-matriza-name, #calc-matriza-bd").on("input", validateFields);
+
+        // Перевірка заповнення матриці (припускаємо, що матриця заповнюється автоматично)
+        setInterval(validateFields, 500);
+
         // Кнопка для збереження в PDF
         $("#savePdfBtn").click(function () {
-          // Отримуємо ім'я користувача з поля введення
           const userName = $("#calc-matriza-name").val();
-
-          // Додаємо ім'я до відповідного елемента в HTML
           const nameElement = document.getElementById("userNameInPdf");
           if (userName !== "") {
-            nameElement.textContent = `Квадрат піфагора для: ${userName}`;
+            nameElement.textContent = `Квадрат Піфагора для: ${userName}`;
           }
 
-          var element = document.getElementById("contentToSave");
-
+          const element = document.getElementById("contentToSave");
           html2pdf()
             .from(element)
             .set({
-              filename: `${userName}_особистий_Квадрат_Піфагора_від_Вікторії_Гонч.pdf`, // Назва файлу з ім'ям користувача
-              orientation: "landscape", // Альбомний формат
-              margin: [10, 10, 10, 10], // Падінги
+              filename: `${userName}_особистий_Квадрат_Піфагора_від_Вікторії_Гонч.pdf`,
+              orientation: "landscape",
+              margin: [10, 10, 10, 10],
             })
             .save();
         });
